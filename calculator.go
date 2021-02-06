@@ -14,24 +14,24 @@ func main() {
 	fmt.Println("2: resta")
 	fmt.Println("3: multiplicacion")
 	fmt.Println("4: division")
-	operator, _ := strconv.Atoi(readKeyboard())
+	operator, _ := strconv.Atoi(ReadKeyboard())
 	fmt.Println("ingresa la cadena Ejm ====> 4+4+4")
 
 	switch operator {
 	case 1:
-		values := strings.Split(readKeyboard(), "+")
+		values := strings.Split(ReadKeyboard(), "+")
 		valuesInteger := valuesIntegers(values)
 		fmt.Println(sum(valuesInteger))
 	case 2:
-		values := strings.Split(readKeyboard(), "-")
+		values := strings.Split(ReadKeyboard(), "-")
 		valuesInteger := valuesIntegers(values)
 		fmt.Println(subs(valuesInteger))
 	case 3:
-		values := strings.Split(readKeyboard(), "*")
+		values := strings.Split(ReadKeyboard(), "*")
 		valuesInteger := valuesIntegers(values)
 		fmt.Println(mul(valuesInteger))
 	case 4:
-		values := strings.Split(readKeyboard(), "/")
+		values := strings.Split(ReadKeyboard(), "/")
 		valuesInteger := valuesIntegers(values)
 		fmt.Println(div(valuesInteger))
 	default:
@@ -39,7 +39,7 @@ func main() {
 	}
 }
 
-func readKeyboard() string {
+func ReadKeyboard() string {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
 	return scanner.Text()
