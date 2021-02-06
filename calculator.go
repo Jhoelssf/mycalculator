@@ -39,6 +39,7 @@ func main() {
 	}
 }
 
+// Function Read the Keyboard
 func ReadKeyboard() string {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
